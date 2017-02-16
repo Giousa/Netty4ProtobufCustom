@@ -1,0 +1,21 @@
+option java_package = "com.giousa.netty4protobufcustom.model";
+
+option java_outer_classname = "PersonPb";
+
+message PBPlayer{
+
+    required int64 playerId = 1;
+
+    required int32 age = 2;
+
+    required string name = 3;
+
+    repeated int32 skills = 4;
+}
+
+message PBResources{
+
+    required int64 gold = 1;
+
+    required int32 energy = 2;
+}
