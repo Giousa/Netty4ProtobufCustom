@@ -17,7 +17,6 @@ import io.netty.handler.codec.MessageToByteEncoder;
 public class ProtobufEncoder extends MessageToByteEncoder<Object> {
     @Override
     protected void encode(ChannelHandlerContext channelHandlerContext, Object o, ByteBuf byteBuf) throws Exception {
-        System.out.println("encode");
         PBPlayer pbPlayer = (PBPlayer) o;
         byte[] bytes = pbPlayer.encode();
         System.out.println("bytes = "+ Arrays.toString(bytes));

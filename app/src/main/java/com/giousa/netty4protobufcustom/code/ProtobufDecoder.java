@@ -17,7 +17,6 @@ import io.netty.handler.codec.MessageToMessageDecoder;
 public class ProtobufDecoder extends MessageToMessageDecoder<ByteBuf>{
     @Override
     protected void decode(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf, List<Object> list) throws Exception {
-        System.out.println("decode");
         final byte[] array;
         final int length=byteBuf.readableBytes();
         array=new byte[length];
